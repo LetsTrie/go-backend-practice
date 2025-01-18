@@ -89,3 +89,6 @@ func (app *application) runWithGracefulShutdown() error {
 	log.Println("Shutting down application gracefully")
 	return nil
 }
+
+// migrate create -seq -ext sql -dir ./cmd/migrate/migrations create_users
+// migrate -path=./cmd/migrate/migrations -database="postgresql://admin:password@localhost:5432/playground?sslmode=disable" up
